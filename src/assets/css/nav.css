@@ -1,0 +1,63 @@
+:root {
+  --nav-bg-color: #252525;
+  --nav-text-color: #ebeaea;
+  --lukes-color: #E35627;
+  --nav-height: 3.5rem;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("./../fonts/raleway/Raleway-Regular.ttf");
+}
+
+nav {
+  position: fixed;
+  top: 0; 
+  right: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 3rem;
+  background-color: var(--nav-bg-color);
+  height: var(--nav-height);
+  /* border: 5px solid red; */
+}
+
+nav > .navButton {
+  color: var(--nav-text-color);
+  text-align: center;
+  padding: 10px;
+  width: 6rem;
+  /* margin-top: 1.5rem; */
+  font-family: "Raleway";
+  font-size: 0.8rem;
+  letter-spacing: 0.3rem;
+}
+
+nav > .navButton:hover{
+  cursor: pointer;
+  color: var(--lukes-color);
+}
+
+nav > #navLogoContainer{
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* border: 1px solid red; */
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 10rem;
+  height: var(--nav-height);
+  margin: 0;
+}
+
+#navLogoContainer > img {
+  /* border: 1px solid purple; */
+  width: 8rem;
+}

@@ -1,0 +1,75 @@
+:root{
+  --reservation-button-text-color: #C6C3C2;
+  --reservation-button-hover-color: #ebeaea;
+  --video-overlay-color: rgba(0, 0, 0, 0.20);
+  --lukes-color: #E35627;
+}
+
+#videoBackground{
+  position: absolute;
+  top: 0; 
+  right: 0; 
+  bottom: 0; 
+  left: 0;
+  z-index: -99;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+#videoBackground iframe{
+  z-index: -98;
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 975px;
+  pointer-events: none;
+}
+
+
+#videoOverlay {
+  z-index: -97;
+  /* border: 5px solid purple; */
+  height: 100%; 
+  width: 100%;
+  background-color: var(--video-overlay-color);
+}
+
+.pageContent {
+  position: relative;
+  top: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 50px;
+  align-items: center;
+  height: 600px; 
+  width: 600px;
+}
+
+#mainPageLogoContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+#mainPageLogoContainer > img {
+  width: 75%;
+}
+
+#reservationButton{
+  border: 2px solid var(--reservation-button-text-color);
+  width: 14rem;
+  height: 2.5rem;
+  background: none;
+  color: var(--reservation-button-text-color);
+  background-color: rgba(255, 255, 255, 0);
+  transition: background-color 250ms, border-color 250ms, color 250ms;
+}
+
+#reservationButton:hover{
+  background-color: var(--reservation-button-hover-color);
+  border-color: var(--reservation-button-hover-color);
+  color: #000;
+}
