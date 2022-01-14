@@ -21,7 +21,7 @@ const app = (function(){
     }, 
     menu: () => {
       _clearPageContent();
-      _contentContainer.appendChild(menuPage);
+      _contentContainer.appendChild(menuPage.render());
     }, 
     contact: () => {_clearPageContent();
       _clearPageContent();

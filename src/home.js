@@ -44,7 +44,9 @@ function reservationButton(){
   buttonContainer.id = "reservationButtonContainer";
   const button = document.createElement("button");
   button.id = "reservationButton";
-  button.innerHTML = "<p>BOOK A TABLE<p>"
+  const buttonText = document.createElement("p");
+  buttonText.innerText = "BOOK A TABLE";
+  button.appendChild(buttonText);
   buttonContainer.appendChild(button);
   return buttonContainer;
 }
