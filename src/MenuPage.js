@@ -1,4 +1,5 @@
 import "./assets/css/menu.css";
+import MenuPageBanner from "./MenuPageBanner.js";
 import Menu from "./Menu.js";
 
 /**
@@ -49,6 +50,8 @@ class MenuPage{
 
   // Returns an HTML DOM node with all children nodes. Ready to be rendered into the HTML DOM. 
   render(){
+    this.#pageContainer.appendChild( new MenuPageBanner().render() );
+
     Object.keys(this.#menus).forEach( key => {
       this.#pageContainer.appendChild(this.#menus[key].render());
     });
