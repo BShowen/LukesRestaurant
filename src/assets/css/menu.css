@@ -1,0 +1,100 @@
+.w100{
+  width: 100%;
+}
+
+#menuPageContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-self: flex-start;
+  margin-top: 8rem;
+  width: 70%;
+  /* border: 1px solid red; */
+  padding: 3px;
+}
+
+.menu{
+  /* border: 2px solid green; */
+  padding: 3px;
+}
+
+.titleContainer{
+  border: 1px solid #666666;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.titleContainer:hover{
+  background-color: #F7F7F7;
+  cursor: pointer;
+}
+
+.titleContainer > h2 {
+  color: #666666;
+  font-size: 18px;
+  font-family: "Raleway-Light";
+}
+
+.titleContainer > img {
+  transition: transform 350ms;
+}
+
+.rotate{
+  /* transform: rotate(180deg); */
+  transform: rotateX(180deg);
+}
+
+.menuBody{
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: no-wrap;
+  justify-content: flex-start;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 350ms ease-out;
+}
+
+.expanded{
+  transition: max-height 350ms ease-in;
+  max-height: 700px; /* set max-height greater than the div will ever be */
+}
+
+.left{
+  /* border: 2px solid purple; */
+  width: 45%;
+}
+
+.right{
+  /* border: 2px solid green; */
+  width: 45%;
+}
+
+.menuCategory{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* border: 3px solid red; */
+  height: min-content;
+  margin: 5px;
+  padding: 5px;
+  width: fit-content;
+}
+
+.menuCategory > h2 {
+  color: #EF5924;
+  font-size: 15px;
+  font-family: "Raleway-Light";
+}
+
+.mealContainer{
+  /* border: 1px solid orange; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  font-size: 12px;
+  margin: 5px 0;
+}
