@@ -5,7 +5,7 @@ import homePage from "./home.js";
 import MenuPage from "./MenuPage.js";
 import contactPage from "./contact.js";
 
-import { lunch, dinner } from "./testDB.js";
+import { lunch, dinner, brunch, cocktailsAndBeer, wine } from "./testDB.js";
 
 const app = (function(){
 
@@ -25,10 +25,11 @@ const app = (function(){
       _clearPageContent();
       const page = new MenuPage();
 
-      page.addMenu({title: "DINNER"});
-      page.getMenu("DINNER").addCategory(dinner);
-      page.addMenu({title: "LUNCH"});
-      page.getMenu("LUNCH").addCategory(lunch);
+      page.addMenu({title: "DINNER"}).addCategory(dinner);
+      page.addMenu({title: "LUNCH"}).addCategory(lunch);
+      page.addMenu({title:"BRUNCH"}).addCategory(brunch);
+      page.addMenu({title: "COCKTAILS & BEER"}).addCategory(cocktailsAndBeer);
+      page.addMenu({title: "WINE"}).addCategory(wine);
 
       _contentContainer.appendChild(page.render());
     }, 

@@ -31,6 +31,7 @@ class MenuPage{
    */
   addMenu({title}){
     this.#menus[title] = new Menu({title: title});
+    return this.#menus[title];
   }
 
   /**
