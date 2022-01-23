@@ -82,7 +82,7 @@
 
 .expanded{
   transition: max-height 350ms ease-in;
-  max-height: 700px; /* set max-height greater than the div will ever be */
+  max-height: 900px; /* set max-height greater than the div will ever be */
 }
 
 .left{
