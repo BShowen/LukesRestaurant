@@ -13,28 +13,6 @@
   padding: 3px;
 }
 
-.menuPageBanner{
-  /* border: 1px solid red; */
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  margin-bottom: 10rem;
-}
-
-.menuPageBanner > .left, 
-.menuPageBanner > .right {
-  background-image: url("./../images/header-hatch.png");
-  background-size: 15px 15px;
-  background-image: repeat-x;
-}
-
-.menuPageBanner > div {
-  text-align: center;
-  font-size: 15px;
-  width: 20%;
-}
-
 .menu{
   /* border: 2px solid green; */
   padding: 3px;

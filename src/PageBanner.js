@@ -1,15 +1,17 @@
-class MenuPageBanner {
+import "./assets/css/pageBanner.css";
+
+class PageBanner {
 
   #mainContainer = document.createElement("div");
   #leftContainer = document.createElement("div");
   #middleContainer = document.createElement("div");
   #rightContainer = document.createElement("div");
 
-  constructor(){
-    this.#mainContainer.classList.add("menuPageBanner");
+  constructor(bannerText = ""){
+    this.#mainContainer.classList.add("pageBanner");
     
     const bannerTitle = document.createElement("h2");
-    bannerTitle.innerText = "MENU";
+    bannerTitle.innerText = bannerText.toUpperCase();
     this.#middleContainer.appendChild(bannerTitle);
 
     this.#leftContainer.classList.add("left");
@@ -25,4 +27,4 @@ class MenuPageBanner {
   }
 }
 
-export default MenuPageBanner;
+export default PageBanner;

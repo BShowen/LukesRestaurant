@@ -1,0 +1,21 @@
+.pageBanner{
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin-bottom: 10rem;
+}
+
+.pageBanner > .left, 
+.pageBanner > .right {
+  background-image: url("./../images/header-hatch.png");
+  background-size: 15px 15px;
+  background-image: repeat-x;
+}
+
+.pageBanner > div {
+  text-align: center;
+  font-size: 15px;
+  width: 20%;
+}
