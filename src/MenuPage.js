@@ -18,10 +18,12 @@ class MenuPage{
    * }
    */
   #menus;
+  #menusContainer = document.createElement("div");
 
   constructor(){
     this.#menus = {};
     this.#pageContainer.id = "menuPageContainer";
+    this.#menusContainer.id = "menusContainer";
   }
 
   /**
@@ -53,9 +55,12 @@ class MenuPage{
   render(){
     this.#pageContainer.appendChild( new PageBanner("MENU").render() );
 
+
     Object.keys(this.#menus).forEach( key => {
-      this.#pageContainer.appendChild(this.#menus[key].render());
+      this.#menusContainer.appendChild(this.#menus[key].render());
     });
+
+    this.#pageContainer.appendChild(this.#menusContainer);
     return this.#pageContainer;
   }
 }
