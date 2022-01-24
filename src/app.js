@@ -3,7 +3,7 @@ import "./assets/css/app.css";
 import nav from "./nav.js";
 import homePage from "./home.js";
 import MenuPage from "./MenuPage.js";
-import contactPage from "./contact.js";
+import ContactPage from "./ContactPage.js";
 
 import { lunch, dinner, brunch, cocktailsAndBeer, wine } from "./testDB.js";
 
@@ -35,7 +35,7 @@ const app = (function(){
     }, 
     contact: () => {_clearPageContent();
       _clearPageContent();
-      _contentContainer.appendChild(contactPage); 
+      _contentContainer.appendChild( new ContactPage().render() ); 
     }
   }
   const _addEventListeners = function(){

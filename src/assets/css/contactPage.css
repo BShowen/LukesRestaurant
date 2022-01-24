@@ -1,0 +1,11 @@
+#contactPageContainer{
+  border: 1px solid green;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-self: flex-start;
+  margin-top: 8rem;
+  width: 70%;
+  padding: 3px;
+}
+
