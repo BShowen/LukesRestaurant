@@ -18,10 +18,14 @@ class ContactPage{
   }
 
   #renderBookNowSection(){
-    const topSection = new BookNowSection("BOOK NOW", {button: "BOOK NOW"});
-    const bottomSection = new BookNowSection("JOIN OUR TEAM", { p: "FILL OUT AN APPLICATION TO JOIN OUR TEAM"});
-    this.#bookNowSection.appendChild( topSection.render() );
-    this.#bookNowSection.appendChild( bottomSection.render() );
+    const topSection = new BookNowSection("BOOK NOW", {button: "Book now"}).render();
+    topSection.classList.add("topSection");
+    const bottomSection = new BookNowSection("JOIN OUR TEAM", { p: "Fill out an application to join our team."}).render();
+    bottomSection.classList.add("bottomSection");
+    
+    this.#bookNowSection.appendChild( topSection );
+    this.#bookNowSection.appendChild( bottomSection );
+    this.#bookNowSection.id = "bookNowSection";
   }
 
   #renderContactInformation(){
@@ -33,6 +37,7 @@ class ContactPage{
     this.#contactInfoSection.appendChild(phone);
     this.#contactInfoSection.appendChild(address);
     this.#contactInfoSection.appendChild(email);
+    this.#contactInfoSection.id = "contactSection";
   }
 
   render(){

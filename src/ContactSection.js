@@ -11,14 +11,17 @@ class ContactSection{
   }
 
   #createSection(params = {}){
-    const container = document.createElement("div");
-    
     const contactType = Object.keys(params)[0];
+    
+    const container = document.createElement("div");
+    container.id = contactType;
 
     const title = document.createElement("p");
+    title.classList.add("title");
     title.innerText = contactType.toUpperCase();
     
     const text = document.createElement("p");
+    text.classList.add("contactSectionText")
     text.innerText = params[contactType];
     
     container.appendChild(title);

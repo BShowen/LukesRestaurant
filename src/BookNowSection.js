@@ -12,8 +12,9 @@ class BookNowSection{
   #sectionContent;
 
   constructor(title, options = {}){
-    this.#sectionContainer.classList.add("bookNowSection-bottom");
     this.#sectionTitle.innerText = title;
+    this.#sectionTitle.classList.add("title");
+
     
     const tagType = Object.keys(options)[0];
     this.#sectionContent = document.createElement(tagType);
